@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder | ResumeCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">Resume<span>Craft</span></div>
+    <div class="header-actions">
+        <button id="saveBtn" class="secondary-btn">Save Resume</button>
+        <button id="exportBtn" class="primary-btn">Export PDF</button>
+    </div>
+</header>
+
+<main class="workspace">
+
+    <section class="editor">
+        <h1>Build your resume</h1>
+        <p class="subtitle">Enter your details and watch your resume update.</p>
+
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            <label>Full Name</label>
+            <input id="name" placeholder="Your full name">
+
+            <label>Professional Title</label>
+            <input id="jobTitle" placeholder="e.g. Software Developer">
+
+            <label>Email</label>
+            <input id="email" type="email" placeholder="you@example.com">
+
+            <label>Phone</label>
+            <input id="phone" placeholder="+91 9876543210">
+
+            <label>Location</label>
+            <input id="location" placeholder="City, Country">
+
+            <label>Professional Summary</label>
+            <textarea id="summary" rows="4"
+                placeholder="Write a short professional summary"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Skills</h2>
+            <textarea id="skills" rows="3"
+                placeholder="Python, HTML, CSS, JavaScript"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Education</h2>
+            <textarea id="education" rows="4"
+                placeholder="Degree, Institution, Year"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Projects</h2>
+            <textarea id="projects" rows="5"
+                placeholder="Project name and description"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Work Experience</h2>
+            <textarea id="experience" rows="5"
+                placeholder="Job title, company and responsibilities"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Resume Template</h2>
+            <select id="template">
+                <option value="classic">Template 1 - Classic</option>
+                <option value="modern">Template 2 - Modern</option>
+                <option value="minimal">Template 3 - Minimal</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="preview-area">
+        <div class="preview-heading">
+            <h2>Live Resume Preview</h2>
+            <span>A4 Preview</span>
+        </div>
+
+        <div id="resumePreview" class="resume-page classic">
+            <h1 id="previewName">Your Name</h1>
+            <h3 id="previewTitle">Professional Title</h3>
+
+            <p id="previewContact">Email | Phone | Location</p>
+
+            <hr>
+
+            <div class="resume-section" data-section="summary">
+                <h2>PROFILE</h2>
+                <p id="previewSummary">Your professional summary will appear here.</p>
+            </div>
+
+            <div class="resume-section" data-section="skills">
+                <h2>SKILLS</h2>
+                <p id="previewSkills">Your skills will appear here.</p>
+            </div>
+
+            <div class="resume-section" data-section="education">
+                <h2>EDUCATION</h2>
+                <p id="previewEducation">Your education will appear here.</p>
+            </div>
+
+            <div class="resume-section" data-section="projects">
+                <h2>PROJECTS</h2>
+                <p id="previewProjects">Your projects will appear here.</p>
+            </div>
+
+            <div class="resume-section" data-section="experience">
+                <h2>EXPERIENCE</h2>
+                <p id="previewExperience">Your experience will appear here.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
